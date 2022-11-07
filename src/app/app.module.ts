@@ -1,19 +1,22 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { SocialLoginModule, SocialAuthServiceConfig } from '@abacritt/angularx-social-login';
-import { GoogleLoginProvider,} from '@abacritt/angularx-social-login';
+import { GoogleLoginProvider,FacebookLoginProvider} from '@abacritt/angularx-social-login';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
+import {HttpClientModule} from '@angular/common/http';
+import { LocationComponent } from './location/location.component'
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LocationComponent
   ],
   imports: [
     BrowserModule,
     SocialLoginModule,
     AppRoutingModule,
+    HttpClientModule
    
   ],
   providers: [
@@ -29,6 +32,13 @@ import { AppComponent } from './app.component';
             )
           },
           
+          {
+            id: FacebookLoginProvider.PROVIDER_ID,
+            provider: new FacebookLoginProvider(
+              'clientId'
+              )
+          }
+
         ],
         onError: (err: any) => {
           console.error(err);
