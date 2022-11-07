@@ -5,12 +5,14 @@ import { GoogleLoginProvider,FacebookLoginProvider} from '@abacritt/angularx-soc
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {HttpClientModule} from '@angular/common/http';
-import { LocationComponent } from './location/location.component'
+import { LocationComponent } from './location/location.component';
+import { PaymentComponent } from './payment/payment.component'
 
 @NgModule({
   declarations: [
     AppComponent,
-    LocationComponent
+    LocationComponent,
+    PaymentComponent
   ],
   imports: [
     BrowserModule,
