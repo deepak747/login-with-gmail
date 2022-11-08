@@ -6,13 +6,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {HttpClientModule} from '@angular/common/http';
 import { LocationComponent } from './location/location.component';
-import { PaymentComponent } from './payment/payment.component'
+import { PaymentComponent } from './payment/payment.component';
+import { RazorpayComponent } from './razorpay/razorpay.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     LocationComponent,
-    PaymentComponent
+    PaymentComponent,
+    RazorpayComponent
   ],
   imports: [
     BrowserModule,
